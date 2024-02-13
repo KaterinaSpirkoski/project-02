@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var.$background-color-base;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

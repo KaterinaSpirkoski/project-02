@@ -1,0 +1,136 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
+@use "sass:math";
+
+#visitors {
+  // ..........................banner style.....................
+  .masterpiece {
+    background-image: url(../images/bricks.png);
+    background-repeat: repeat-x;
+    background-color: var.$background-color-base;
+    .banner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 8.875rem;
+      width: 100%;
+      .h1-title {
+        font-size: var.$heading-size-small;
+        font-weight: var.$font-weight-medium;
+        line-height: 35, 16px;
+        color: var.$text-color-primary;
+        font-family: var.$font-family-base;
+      }
+      .btn-find {
+        color: var.$text-color-secondary;
+        background-color: var.$background-color-secondary;
+        font-family: var.$font-family-base;
+        font-size: var.$font-size-small;
+        border-radius: 2px;
+        border: var.$text-color-primary;
+        padding: 5px 15px;
+      }
+    }
+  }
+  //  .......................... sliders container...............
+  .slider-container {
+    background-color: var.$background-color-primary;
+    height: 429px;
+    overflow: hidden;
+
+    .sliders {
+      width: max-content;
+      overflow: hidden;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+      white-space: nowrap;
+      display: flex;
+    }
+    .first-row {
+      animation: moveleft 300s linear infinite;
+    }
+    @keyframes moveleft {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .second-row {
+      animation: moveright 300s linear infinite;
+    }
+
+    @keyframes moveright {
+      0% {
+        transform: translate(-50%, 0);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    .img-slider {
+      box-shadow: 0px 2px 2px 0px #00000040;
+      margin-right: var.$gutter-base;
+      margin-top: 40px;
+      filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  // ............................carousel container.........
+  .carousel-container {
+    padding-bottom: var.$gutter-base;
+    margin-top: var.$gutter-base;
+    font-size: 9px;
+    position: relative;
+    .carousel-inner {
+      width: 70%;
+      margin: 0 auto;
+    }
+    .slide-inner {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: math.div(var.$gutter-base, 2);
+      .card-wrapper.left {
+        margin-right: 35px;
+        .profil-1 {
+          width: 46px;
+          height: 46px;
+          border: 2px solid var.$text-color-primary;
+          border-radius: 50%;
+          position: absolute;
+          top: 0px;
+          left: 30px;
+        }
+      }
+      .card-wrapper.right {
+        margin-left: 20px;
+      }
+      .border-carousel {
+        display: inline-block;
+      }
+    }
+    .carousel-card-inner {
+      background-color: var.$background-color-tertiary;
+      width: 106px;
+      color: var.$text-color-secondary;
+      text-align: center;
+      .text-card {
+        margin-top: var.$gutter-base;
+        padding: 30px 10px 5px 10px;
+        line-height: 1.2;
+      }
+    }
+    .carousel-text-inner {
+      color: var.$text-color-primary;
+      text-align: center;
+      .text {
+        padding: 8px 20px;
+        margin-top: 35px;
+      }
+    }
+  }
+}

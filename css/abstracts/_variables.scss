@@ -1,0 +1,52 @@
+@use "sass:math";
+
+@function rem-calc($size) {
+  @return (math.div($size, 16)) * 1rem;
+}
+
+// Font settings
+$font-family-base: "Roboto", sans-serif;
+$font-family-secondary: "Reenie Beanie", cursive;
+// font size
+$font-size-xs: rem-calc(11);
+$font-size-small: rem-calc(12);
+$font-size-base: rem-calc(13);
+$font-size-medium: rem-calc(18);
+$font-size-large: rem-calc(32);
+
+$heading-size-small: rem-calc(30);
+$heading-size-big: rem-calc(45);
+$heading-size-bigger: rem-calc(48);
+// line height
+$line-height-base: 1.5;
+$line-height-small: 1;
+// font - weight
+$font-weight-thiny: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-base: $font-weight-normal;
+
+// Size settings
+$gutter-base: rem-calc(30);
+
+// Color settings
+$text-color-base: #fff;
+$text-color-primary: #a16a5e;
+$text-color-secondary: #fcebd5;
+$text-color-tertiary: #e09686;
+$text-color-quaternary: #edd5bb;
+
+$background-color-base: #fcebd5;
+$background-color-primary: #edd5bb;
+$background-color-secondary: #a16a5e;
+$background-color-orange: #d44c2e;
+$background-color-tertiary: #e09686;
+
+// btn color
+$btn-color-blue: #1b59ac;
+$btn-color-green: #1bac6f;
+$btn-color-orange: #d44c2e;
+$btn-color-grey: #e5e5e5;
+
+// math.div(var.$gutter-base, 2)

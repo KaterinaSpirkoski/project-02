@@ -1,0 +1,142 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
+@use "sass:math";
+#header {
+  height: 69px;
+  margin-top: 0;
+  box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: center;
+  .logo-brand {
+    font-family: var.$font-family-secondary;
+    font-size: 30px;
+    color: var.$text-color-primary;
+  }
+  .logo {
+    font-family: var.$font-family-secondary;
+    font-size: 1.5em;
+    color: var.$text-color-primary;
+    text-align: center;
+    h1 {
+      font-size: var.$heading-size-small;
+      margin-top: math.div(var.$gutter-base, 2);
+    }
+    .logo-img {
+      width: 85px;
+      position: relative;
+      .bg-logo {
+        width: 58px;
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        z-index: 1;
+      }
+      .l-img {
+        width: 104px;
+        display: block;
+        position: absolute;
+        left: -15px;
+        top: -15px;
+        z-index: 2;
+        img {
+          width: 104px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// header {
+//   align-items: center;
+//   position: relative;
+//   // display: block;
+//   height: 69px;
+//   z-index: 100 !important;
+//   padding: 5px 15px;
+//   box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+//   .nav-icon-container {
+//     display: flex;
+//     .menu-btn {
+//       cursor: pointer;
+//       display: none;
+//     }
+//     .auction-btn {
+//       display: none;
+//       img {
+//         margin-right: math.div(var.$gutter-base, 3);
+//       }
+//     }
+//   }
+//   .toggle-menu {
+//     opacity: 0;
+//     position: absolute;
+//     left: 0;
+//     z-index: 0s;
+//     top: -500%;
+//     width: 100%;
+//     background-color: var.$background-color-secondary;
+//     padding: 0;
+//     margin: 0;
+//     box-shadow: 0px 4px 4px 0px #00000040;
+//     transition: all 0.3s ease;
+//     padding: 25px;
+//     li {
+//       list-style: none;
+//       text-align: center;
+//       transition: all 0.3s ease;
+//       &:hover {
+//         background-color: var.$background-color-secondary;
+//       }
+//       a {
+//         display: block;
+//         font-size: var.$font-size-large;
+//         font-family: var.$font-family-base;
+//         font-weight: var.$font-weight-thiny;
+//         text-decoration: none;
+//         color: var.$text-color-secondary;
+//         line-height: 1.5;
+//         letter-spacing: 4px;
+//       }
+//     }
+//   }
+//   .logo {
+//     font-family: var.$font-family-secondary;
+//     font-size: 1.5em;
+//     color: var.$text-color-primary;
+//     text-align: center;
+//     h1 {
+//       font-size: var.$heading-size-small;
+//       margin-top: math.div(var.$gutter-base, 2);
+//     }
+//     .logo-img {
+//       width: 85px;
+//       position: relative;
+//       .bg-logo {
+//         width: 58px;
+//         display: block;
+//         position: absolute;
+//         top: 5px;
+//         left: 8px;
+//         z-index: 1;
+//       }
+//       .l-img {
+//         width: 104px;
+//         display: block;
+//         position: absolute;
+//         left: -15px;
+//         top: -15px;
+//         z-index: 2;
+//         img {
+//           width: 104px;
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+//   .toggle-menu.active {
+//     top: 69px;
+//     opacity: 1;
+//   }
+// }
